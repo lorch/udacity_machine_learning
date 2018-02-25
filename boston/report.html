@@ -11803,7 +11803,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 载入此项目所需要的库</span>
@@ -11827,7 +11827,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 载入波士顿房屋的数据集</span>
@@ -11894,7 +11894,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#目标：计算价值的最小值</span>
@@ -11968,7 +11968,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -12038,7 +12038,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 2</span>
@@ -12069,7 +12069,7 @@ Standard deviation of prices: $165,171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-2---&#22238;&#31572;:">&#38382;&#39064; 2 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-2---&#22238;&#31572;:">&#182;</a></h3><ul>
-<li>训练数据之后可以验证训练结果，避免欠拟合或者过拟合</li>
+<li>训练数据之后可以验证训练结果，判断是否欠拟合或者过拟合</li>
 <li>使用训练数据达不到预期效果，因为结果特征由训练数据训练得来，所以大多数训练数据能够适应结果特征</li>
 </ul>
 
@@ -12107,7 +12107,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 3</span>
@@ -12130,7 +12130,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 3 可选</span>
@@ -12147,8 +12147,8 @@ Standard deviation of prices: $165,171.13
     <span class="n">sse</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="n">sst</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_true</span><span class="p">)):</span>
-        <span class="n">sse</span> <span class="o">=</span> <span class="n">sse</span> <span class="o">+</span> <span class="p">(</span><span class="n">y_true</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-        <span class="n">sst</span> <span class="o">=</span> <span class="n">sst</span> <span class="o">+</span> <span class="p">(</span><span class="n">y_true</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_predict</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="n">sst</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y_true</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="n">sse</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y_true</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_predict</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
         
     <span class="n">score</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">sse</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">sst</span><span class="p">)</span>
 
@@ -12202,11 +12202,11 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 计算这个模型的预测结果的决定系数</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">7.8</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">])</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">performance_metric2</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">7.8</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">])</span>
 <span class="k">print</span> <span class="s2">&quot;Model has a coefficient of determination, R^2, of {:.3f}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
 </pre></div>
 
@@ -12434,8 +12434,8 @@ Standard deviation of prices: $165,171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-7---&#22238;&#31572;:">&#38382;&#39064; 7 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-7---&#22238;&#31572;:">&#182;</a></h3><ul>
-<li>网格搜索法是指定参数值的一种穷举搜索方法，通过将估计函数的参数通过交叉验证的方法进行优化来得到最优的学习算法。</li>
-<li>将各个参数可能的取值进行排列组合，列出所有可能的组合结果生成“网格”。然后将各组合用于SVM训练，并使用交叉验证对表现进行评估。在拟合函数尝试了所有的参数组合后，返回一个合适的分类器，自动调整至最佳参数组合，可以通过clf.best_params_获得参数值。</li>
+<li>遍历指定的各种参数组合，通过交叉验证得到最优的学习算法。</li>
+<li>将指定的参数进行各种组合，进行交叉验证并比较结果。</li>
 </ul>
 
 </div>
@@ -12461,10 +12461,10 @@ Standard deviation of prices: $165,171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#38382;&#39064; 8 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#182;</a></h3><ul>
-<li>将数据集分成K分，一份作为测试集，其余作为训练集，变换测试集，循环K次后平均K次的结果，得到单一结果。</li>
+<li>将训练集分成K分，一份作为验证集，其余作为训练集，变换验证集，循环K次后平均K次的结果，得到单一结果。</li>
 <li>GridSearchCV可以通过自动调参来完成对最佳参数组合的选择。</li>
 <li>'cv<em>results</em>' 告诉我们模型参数，模型性能，模型消耗时间等参数。</li>
-<li>如果不适用交叉验证，可能会由于数据分布不均匀导致训练结果产生偏差。交叉验证通过多次验证避免了这种情况。</li>
+<li>使用交叉验证，可以给出更加精确的评分，帮助网格选择参数。</li>
 </ul>
 
 </div>
@@ -12763,8 +12763,7 @@ Predicted selling price for Client 3&#39;s home: $937,230.00
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#38382;&#39064; 10 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#182;</a></h3><ul>
 <li>客户1的房屋售价：\$411417.39；客户2的房屋售价：\$230828.57；客户3的房屋售价：\$937230.00 。</li>
-<li>根据之前的数据可以得知，师生比例对房价的影响难以捕捉，所以暂时忽略该影响。</li>
-<li>合理。由目前得出的房屋售价可以看出，该模型中，房屋内房间总数越高，社区贫困指数越低，房屋的售价越高。基本符合客观事实。</li>
+<li>合理。根据之前的数据可以得知，师生比例对房价的影响难以捕捉，所以暂时忽略该影响。由目前得出的房屋售价可以看出，该模型中，房屋内房间总数越高，社区贫困指数越低，房屋的售价越高。同时，比照之前模型下得到的房屋价格区间在[105000， 1024800], 均值为454342，基本符合客观事实。</li>
 </ul>
 
 </div>
@@ -12925,7 +12924,13 @@ Range in prices: $29,438.89
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#38382;&#39064; 13 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#182;</a></h3>
+<h3 id="&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#38382;&#39064; 13 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#182;</a></h3><ul>
+<li>在今天并不适用</li>
+<li>不足够来描述一个房屋</li>
+<li>不能，各个地区的情况不同，城乡差异更大</li>
+<li>不合适</li>
+</ul>
+
 </div>
 </div>
 </div>

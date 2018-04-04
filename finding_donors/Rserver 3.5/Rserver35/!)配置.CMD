@@ -1,0 +1,4 @@
+ÿþ
+@echo off
+@start rserver3.exe /setup
+exit

